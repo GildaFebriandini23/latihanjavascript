@@ -1,14 +1,20 @@
-var again = true;
-
-while(again){
-    var angka = prompt('Masukkan Angka : ');
-    if (angka % 2 === 0){
-        alert(angka + ' Adalah angka Genap ');
-    }else{
-        alert(angka + ' Adalah angka Ganjil ');
+function Bil(){
+    var a = prompt("Masukan Bilangan") ;
+    if (a !=null){
+        if (a % 2 == 0 ){
+            alert(a + 'adalah bilangan genap');
+            var a = confirm('lagi ?');
+            if (a) Bil();
+        }else{
+            alert(a + 'adalah bilangan ganjil');
+            var a = confirm('lagi ?');
+            if (a) Bil();
+        }
+    } else{
+        var tanya = confirm('Lagi');
     }
 
-    again = confirm('Mau Coba Lagi ?');
+    if (tanya){
+        Bil();
+    }
 }
-
-alert('Terimakasih...');
