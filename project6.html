@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 6</title>
+</head>
+<body>
+
+<script>
+
+    var user = prompt("Masukkan Jumlah User : ");
+    if(user != null) {
+
+        var hasil = 0;
+        for (var nilai = 1; nilai <= user; nilai++){
+            var jumlah = parseInt(prompt("Masukkan Nilai User" + nilai + "="));
+            console.log("Perulangan Ke " + nilai + " = " + jumlah);
+           hasil = (hasil+jumlah)/ nilai;
+        }
+
+        var mutu = "";
+        if (hasil >= 80) {
+            mutu = "A";
+        } else if (hasil >= 65 && hasil <= 79) {
+            mutu = "B";
+        } else {
+            mutu = "C";
+        }
+
+        alert("Nilai Anda adalah : " + hasil + " Nilai Mutunya adalah : " + mutu);
+    }
+</script>
+
+</body>
+</html>
