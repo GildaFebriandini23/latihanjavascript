@@ -11,10 +11,12 @@ function Bil(){
             if (a) Bil();
         }
     } else{
-        var tanya = confirm('Lagi');
+        var tanya = confirm('apakah anda ingin keluar ?');
     }
 
-    if (tanya){
+    if (tanya !=true){
         Bil();
+    }else{
+        alert('terimakasih ;)')
     }
 }
