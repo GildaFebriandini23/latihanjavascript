@@ -6,29 +6,27 @@
 
 <body>
             <script>
-                var mid = prompt("Nilai Midsemester anda : ");
+                for (var z=0; z<=3; z++) {
+                    var user = prompt ("Nama: ");
+                    var mid = prompt("Nilai Midsemester anda : ");
 
-                var semester = prompt     ("Nilai Semester anda : ");
+                    var semester = prompt("Nilai Semester anda : ");
 
-                var hasil, Keterangan =prompt
+                    var hasil, Keterangan = prompt
+                    lol = 0.5 * mid;
+                    lel = 0.5 * semester;
+                    hasil = lol + lel;
 
-                hasil=  mid + semester / 2;
+                    if (hasil >= 80) {
+                        Keterangan = "A = Excellent ";
+                    } else if (hasil >= 65) {
+                        Keterangan = "B = guudd ";
+                    } else {
+                        Keterangan = "C = Jelek";
+                    }
 
-                if(hasil>=80)
-                {
-                    Keterangan= "A = Excellent " ;
+                    document.write("NILAI AKHIR UJIAN: " + user + " adalah " + Keterangan + "<br>");
                 }
-                else if (hasil>=65)
-                {
-                    Keterangan= "B = guudd " ;
-                }
-
-                else
-                {
-                    Keterangan= "C = Jelek" ;
-                }
-
-                document.write("NILAI AKHIR UJIAN: "+Keterangan);
             </script>
             </hr>
         </font>
