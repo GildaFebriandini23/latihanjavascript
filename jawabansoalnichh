@@ -1,0 +1,37 @@
+function Nilai() {
+
+    var a = parseInt(prompt('Masukkan nilai anda : '));
+        b = parseInt(prompt ('Masukkan nilai anda : '));
+
+        c = (a+b)/2;
+    if (a != null && b != null){
+        if ( c >= 80){
+            alert(c + ' Predikat anda adalah A');
+            var a = confirm('Mau Coba Lagi Gak ???');
+            if (a && b){
+                Nilai();
+            } else {
+                alert('Terimakasih...');
+            }
+        } else if ( c > 60 && c < 80){
+            alert(c + ' Predikat anda adalah B');
+            var a = confirm('Mau Coba Lagi Gak ???');
+            if (a && b){
+                Nilai();
+            } else {
+                alert('Terimakasih....');
+            }
+        } else{
+            alert(c + ' Predikat anda adalah C');
+            var a = confirm('Mau Coba Lagi Gak ???');
+            if (a){
+                Nilai();
+            } else {
+                alert('Terimakasih...');
+            }
+        }
+    }else {
+        alert('Terimakasih...');
+    }
+
+}
