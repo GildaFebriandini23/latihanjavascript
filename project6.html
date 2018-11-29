@@ -15,19 +15,21 @@
         for (var nilai = 1; nilai <= user; nilai++){
             var jumlah = parseInt(prompt("Masukkan Nilai User" + nilai + "="));
             console.log("Perulangan Ke " + nilai + " = " + jumlah);
-           hasil = (hasil+jumlah)/ nilai;
+           hasil += jumlah;
+           console.log(hasil);
         }
 
         var mutu = "";
-        if (hasil >= 80) {
+        var hasil2 = hasil / user;
+        if (hasil2 >= 80) {
             mutu = "A";
-        } else if (hasil >= 65 && hasil <= 79) {
+        } else if (hasil2 >= 65 && hasil2 <= 79) {
             mutu = "B";
         } else {
             mutu = "C";
         }
 
-        alert("Nilai Anda adalah : " + hasil + " Nilai Mutunya adalah : " + mutu);
+        alert("Nilai Anda adalah : " + hasil2 + " Nilai Mutunya adalah : " + mutu);
     }
 </script>
 
