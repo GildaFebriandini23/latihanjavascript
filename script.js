@@ -3,18 +3,18 @@ function Bil(){
     if (a !=null){
         if (a % 2 == 0 ){
             alert(a + 'adalah bilangan genap');
-            confirm('lagi ?');
+            var a = confirm('lagi ?');
+            if (a) Bil();
         }else{
             alert(a + 'adalah bilangan ganjil');
+            var a = confirm('lagi ?');
+            if (a) Bil();
         }
     } else{
-       var tanya = confirm('Lagi');
+        var tanya = confirm('Lagi');
     }
 
     if (tanya){
         Bil();
     }
-
-
-
 }
