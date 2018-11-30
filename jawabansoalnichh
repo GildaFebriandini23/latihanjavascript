@@ -1,37 +1,37 @@
 function Nilai() {
 
-    var a = parseInt(prompt('Masukkan nilai anda : '));
-        b = parseInt(prompt ('Masukkan nilai anda : '));
+    var n = prompt('masukkan jumlah user : ');
 
-        c = (a+b)/2;
-    if (a != null && b != null){
-        if ( c >= 80){
-            alert(c + ' Predikat anda adalah A');
-            var a = confirm('Mau Coba Lagi Gak ???');
-            if (a && b){
-                Nilai();
-            } else {
-                alert('Terimakasih...');
+    if (n != null){
+        var nilai = 0;
+        var  mutu = "";
+            for (var i=1; i<=n; i++){
+                var u = parseInt(prompt('Masukkan nilai user '+ i + ":"));
+                console.log("Perulangan Ke "+ i + "=" + u);
+                nilai += u;
             }
-        } else if ( c > 60 && c < 80){
-            alert(c + ' Predikat anda adalah B');
-            var a = confirm('Mau Coba Lagi Gak ???');
-            if (a && b){
-                Nilai();
-            } else {
-                alert('Terimakasih....');
+            var hasil = nilai / n ;
+            if (hasil >= 80){
+                mutu = "A";
+            } else if (hasil >=65 && hasil<80){
+                mutu = "B";
+            } else{
+                mutu = "C";
             }
-        } else{
-            alert(c + ' Predikat anda adalah C');
-            var a = confirm('Mau Coba Lagi Gak ???');
-            if (a){
-                Nilai();
-            } else {
-                alert('Terimakasih...');
+
+            alert('Nilai anda adalah ' + hasil + ' nilai mutu anda adalah ' + mutu);
+            var t = confirm('Mau coba lagi gak ??? ');
+            if (t != true){
+                alert('Terimakasih');
             }
-        }
-    }else {
-        alert('Terimakasih...');
+
+    } else {
+        var tanya = confirm('Apakah anda ingin keluar ??');
     }
 
+    if (tanya != true){
+        Nilai();
+    } else {
+        alert('Terimakasih sudah mencobaa....');
+    }
 }
